@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function Footer() {
+  const cvalue = useSelector((state) => state.counter.value);
   return (
     <footer className="bg-white dark:bg-gray-800 fixed bottom-0 left-0 right-0">
       <div className="max-w-7xl mx-auto w-full p-6 md:py-8">
@@ -12,7 +14,7 @@ export default function Footer() {
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              Flowbite {cvalue}
             </span>
           </a>
 
